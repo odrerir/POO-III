@@ -3,6 +3,7 @@ export class Endereco{
     private _rua: string;
     private _numero: number;
     private _cidade: string;
+    private _estado: string;
 
 	constructor(rua: string, numero: number, cidade: string, estado: string) {
 		this._rua = rua;
@@ -74,7 +75,5 @@ export class Endereco{
 	public set estado(value: string) {
 		this._estado = value;
 	}
-    private _estado: string;
-
 
 }

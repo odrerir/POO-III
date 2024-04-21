@@ -1,7 +1,7 @@
 import { Cliente } from "./Cliente";
 import { Produto } from "./Produto";
 
-class Vendas{
+export class Venda{
     private _codigo: number;
     private _data: number;
     private _cliente: Cliente;

@@ -9,12 +9,13 @@ export class Cliente{
     private _endereco: Endereco;
     private _telefones: Telefone[];
 
-	constructor(nome: string, cpf: number, data_nascimento: number, sexo: string, endereco: Endereco, telefones: Telefone) {
+	constructor(nome: string, cpf: number, data_nascimento: number, sexo: string, endereco: Endereco, telefones: Telefone[]) {
 		this._nome = nome;
 		this._cpf = cpf;
 		this._data_nascimento = data_nascimento;
 		this._sexo = sexo;
 		this._endereco = endereco;
+        this._telefones = telefones;
 	}
 
     /**

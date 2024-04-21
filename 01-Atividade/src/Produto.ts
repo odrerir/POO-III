@@ -1,13 +1,29 @@
 export class Produto{
     private _codigo: number;
     private _descricao: string;
-    private _valor: number
+    private _valor: number;
 
 
 	constructor(codigo: number, descricao: string, valor: number) {
 		this._codigo = codigo;
 		this._descricao = descricao;
         this._valor = valor;
+	}
+
+    /**
+     * Getter valor
+     * @return {number}
+     */
+	public get valor(): number {
+		return this._valor;
+	}
+
+    /**
+     * Setter valor
+     * @param {number} value
+     */
+	public set valor(value: number) {
+		this._valor = value;
 	}
 
     /**
