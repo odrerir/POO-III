@@ -1,6 +1,6 @@
-import VehicleBuilder from "./vehicles/builders/VehicleBuilder";
-import Director from "./vehicles/directors/Directors";
-import Vehicle from "./vehicles/products/Vehicle";
+import VehicleBuilder from "./builders/VehicleBuilder";
+import Director from "./directors/Directors";
+import Vehicle from "./products/Vehicle";
 
 const builder: VehicleBuilder = new VehicleBuilder();
 const director: Director = new Director(builder);
