@@ -1,4 +1,4 @@
-import IBuilder from "../builders/IBuilder";
+import IBuilder from "../builders/interfaces/IBuilder";
 import Engine from "../components/Engine";
 import Transmission from "../components/Transmission";
 import VehicleType from "../components/VehicleType";

@@ -4,7 +4,7 @@ import Transmission from "../components/Transmission";
 import VehicleType from "../components/VehicleType";
 import Wheel from "../components/Wheel";
 import Vehicle from "../products/Vehicle";
-import IBuilder from "./IBuilder";
+import IBuilder from "./interfaces/IBuilder";
 export default class VehicleBuilder implements IBuilder {
   private vehicle = new Vehicle();
   reset(): void {
