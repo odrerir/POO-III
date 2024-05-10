@@ -13,9 +13,6 @@ switch(currentCompany){
     case Company.NINENINE : 
         factory = new NineNineTransport();
         break;
-    case Company.LIME : 
-        factory = new LimeTransport();
-        break;
     default : 
         console.error("Companhia não definida!");
 }

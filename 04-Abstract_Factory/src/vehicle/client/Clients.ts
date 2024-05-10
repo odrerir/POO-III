@@ -14,6 +14,7 @@ export default class Client{
     }
 
     startRoute() : void{
+        
         this.vehicle.startRoute();
         this.aircraft.startRoute();
     }
