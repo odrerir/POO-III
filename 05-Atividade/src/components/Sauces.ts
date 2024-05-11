@@ -1,15 +1,10 @@
-export default class Sauces {
-    private sauces: string[] = [];
+export default class Sauce{
+    constructor(private _sauces: any){}
 
-    constructor(sauces: string[] = []) {
-        this.sauces = sauces;
+    public get sauces(): any{
+        return this._sauces;
     }
-
-    addSauce(sauce: string) {
-        this.sauces.push(sauce);
-    }
-
-    getSauces(): string[] {
-        return this.sauces;
+    public set sauces(value: any){
+        this._sauces = value;
     }
 }

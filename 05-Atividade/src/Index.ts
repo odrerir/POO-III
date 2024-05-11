@@ -1,7 +1,6 @@
 import SanduicheBuilder from "./builder/SanduicheBuilder";
-import Director from "./directors/director";
 import Sanduiche from "./products/Sanduiche";
-
+import Director from "./directors/Director";
 
 // Cria um novo builder de sanduíches
 const builder = new SanduicheBuilder();
@@ -13,19 +12,18 @@ const director = new Director(builder);
 director.constructXSalada();
 const xSalada: Sanduiche = builder.getSanduiche();
 console.log("Criando um sanduíche...");
-console.log("Tipo: " + xSalada.SanduicheType);
-console.log("Pão: " + xSalada.bread);
-console.log("Proteína: " + xSalada.protein);
-console.log("Salada: " + xSalada.salad);
-console.log("Molhos: " + xSalada.sauces.getSauces().join(", "));
+console.log("Tipo: " + xSalada.getSanduicheType());
+console.log("Pão: " + xSalada.getBread());
+console.log("Proteína: " + xSalada.getProtein());
+console.log("Salada: " + xSalada.getSalad());
+console.log("Molhos: " + xSalada.getSauces().map(sauce => sauce.getName()).join(", "));
 
 // Constrói um sanduíche tipo HOTDOG
 director.constructHotDog();
 const hotDog: Sanduiche = builder.getSanduiche();
 console.log("Criando um sanduíche...");
-console.log("Tipo: " + hotDog.SanduicheType);
-console.log("Pão: " + hotDog.bread);
-console.log("Proteína: " + hotDog.protein);
-console.log("Salada: " + hotDog.salad);
-console.log("Molhos: " + hotDog.sauces.getSauces().join(", "));
-
+console.log("Tipo: " + hotDog.getSanduicheType());
+console.log("Pão: " + hotDog.getBread());
+console.log("Proteína: " + hotDog.getProtein());
+console.log("Salada: " + hotDog.getSalad());
+console.log("Molhos: " + hotDog.getSauces().map(sauce => sauce.getName()).join(", "));

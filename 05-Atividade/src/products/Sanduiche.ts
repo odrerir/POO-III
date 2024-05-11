@@ -5,57 +5,52 @@ import Salad from '../components/Salad';
 import Sauces from '../components/Sauces';
 
 export default class Sanduiche {
-    private SanduicheType: SanduicheType;
-    private bread: Bread;
-    private protein: Protein;
-    private salad: Salad;
-    private sauces: Sauces;
+    private _sanduicheType : SanduicheType;
+    private _bread: Bread;
+    private _protein: Protein;
+    private _salad: Salad;
+    private _sauces: Sauce[] = [];
 
-    constructor() {
-        this.SanduicheType = SanduicheType.XSALADA; 
-        this.bread = Bread.PAO_FRANCES; 
-        this.protein = Protein.HAMBURGUER;
-        this.salad = Salad.LETTUCE; 
-        this.sauces = new Sauces(); 
-    }
+	public get sanduicheType(): SanduicheType {
+		return this._sanduicheType;
+	}
 
-    getSanduicheType(): SanduicheType {
-        return this.SanduicheType;
-    }
+	public get bread(): Bread {
+		return this._bread;
+	}
 
-    setSanduicheType(type: SanduicheType): void {
-        this.SanduicheType = type;
-    }
+	public get protein(): Protein {
+		return this._protein;
+	}
 
-    getBread(): Bread {
-        return this.bread;
-    }
+	public get salad(): Salad {
+		return this._salad;
+	}
 
-    setBread(bread: Bread): void {
-        this.bread = bread;
-    }
+	public get sauces(): Sauce[]  {
+		return this._sauces;
+	}
 
-    getProtein(): Protein {
-        return this.protein;
-    }
+	public set sanduicheType(value: SanduicheType) {
+		this._sanduicheType = value;
+	}
 
-    setProtein(protein: Protein): void {
-        this.protein = protein;
-    }
+	public set bread(value: Bread) {
+		this._bread = value;
+	}
 
-    getSalad(): Salad {
-        return this.salad;
-    }
+	public set protein(value: Protein) {
+		this._protein = value;
+	}
 
-    setSalad(salad: Salad): void {
-        this.salad = salad;
-    }
+	public set salad(value: Salad) {
+		this._salad = value;
+	}
 
-    getSauces(): Sauces {
-        return this.sauces;
-    }
-
-    addSauce(sauce: string): void {
-        this.sauces.addSauce(sauce);
+	public set sauces(value: Sauce[] ) {
+		this._sauces = value;
+	}
+    public addSauce(sauce: Sauce){
+        this.sauces.push(sauce);
     }
 }
