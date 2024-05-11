@@ -9,7 +9,7 @@ export default class Sanduiche {
     private _bread: Bread;
     private _protein: Protein;
     private _salad: Salad;
-    private _sauces: Sauce[] = [];
+    private _sauces: Sauces[] = [];
 
 	public get sanduicheType(): SanduicheType {
 		return this._sanduicheType;
@@ -27,7 +27,7 @@ export default class Sanduiche {
 		return this._salad;
 	}
 
-	public get sauces(): Sauce[]  {
+	public get sauces(): Sauces[]  {
 		return this._sauces;
 	}
 
@@ -47,10 +47,10 @@ export default class Sanduiche {
 		this._salad = value;
 	}
 
-	public set sauces(value: Sauce[] ) {
+	public set sauces(value: Sauces[] ) {
 		this._sauces = value;
 	}
-    public addSauce(sauce: Sauce){
+    public addSauce(sauce: Sauces){
         this.sauces.push(sauce);
     }
 }

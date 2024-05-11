@@ -9,10 +9,8 @@ export default class Director {
     constructor(private builder: IBuilder) {}
 
     constructXSalada() {
-
-        // Constrói um sanduíche tipo XSALADA
         this.builder.setSanduicheType(SanduicheType.XSALADA);
-        this.builder.setBread(Bread.PAO_FRANCES);
+        this.builder.setBread(Bread.PAO_HAMBURGUER);
         this.builder.setProtein(Protein.HAMBURGUER);
         this.builder.setSalad(Salad.LETTUCE);
         this.builder.addSauce(new Sauces("Maionese"));
@@ -22,7 +20,6 @@ export default class Director {
     }
 
     constructHotDog() {
-        this.builder.reset(); 
 
         this.builder.setSanduicheType(SanduicheType.HOTDOG);
         this.builder.setBread(Bread.HOT_DOG);

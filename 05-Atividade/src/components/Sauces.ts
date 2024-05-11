@@ -1,4 +1,4 @@
-export default class Sauce{
+export default class Sauces{
     constructor(private _sauces: any){}
 
     public get sauces(): any{

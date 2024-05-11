@@ -29,7 +29,7 @@ export default class SanduicheBuilder implements IBuilder {
   setSalad(salad: Salad) {
     this.sanduiche.salad = salad;
   }
-  addSauce(sauce: Sauce) {
+  addSauce(sauce: Sauces) {
     this.sanduiche.addSauce(sauce);
   }
 }
